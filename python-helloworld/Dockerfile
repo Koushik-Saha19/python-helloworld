@@ -3,7 +3,9 @@ LABEL maintainer="Koushik Saha"
 
 COPY . /app
 WORKDIR /app
-RUN pip install -r requirements.txt
+RUN pip install Flask
+
+RUN pip install werkzeug
 
 # command to run on container start
 CMD [ "python", "app.py" ]
